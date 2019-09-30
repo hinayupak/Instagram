@@ -1,11 +1,12 @@
 ## Description
 
-An Instagram web copy using
+An Instagram web copy using Laravel
+- Environment: localhost xampp
 - Framework: Laravel 6x
 - Laravel Plugins: Intervention Image plugin
 - Database: SQLite
 - Frontend: Vuejs
-- Credits to: Freecodecamp.org
+- Credits to: Freecodecamp.org https://www.youtube.com/watch?v=ImtZ5yENzgE
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
