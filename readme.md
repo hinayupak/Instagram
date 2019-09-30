@@ -5,6 +5,7 @@ An Instagram web copy using
 - Laravel Plugins: Intervention Image plugin
 - Database: SQLite
 - Frontend: Vuejs
+- Credits to: Freecodecamp.org
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
