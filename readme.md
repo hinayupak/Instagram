@@ -3,10 +3,10 @@
 An Instagram web copy using Laravel
 - Environment: localhost xampp
 - Framework: Laravel 6x
-- Laravel Plugins: Intervention Image plugin
+- Laravel Plugins: Intervention Image, Telescope
 - Database: SQLite
 - Frontend: Vuejs
-- Credits to: Freecodecamp.org https://www.youtube.com/watch?v=ImtZ5yENzgE
+- Credits to: Freecodecamp.org https://www.youtube.com/watch?v=ImtZ5yENzgE, https://www.youtube.com/coderstape
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
