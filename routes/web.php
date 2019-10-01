@@ -11,17 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+use App\Mail\NewUserWelcomeMail;
 
 Auth::routes();
 
+Route::get('/email', function () {
+	return new NewUserWelcomeMail();
+});
+
 Route::post('follow/{user}', 'FollowsController@store');
 
-Route::get('/p/create', 'PostsController@create'); // be careful of ordering routes, this wont work unless above routes with variable
+Route::get('/', 'PostsController@index');
+Route::get('/p/create', 'PostsController@create'); // be careful ordering routes, this wont work unless above routes with variable
 Route::post('/p', 'PostsController@store');
-Route::get('/p/{post}', 'PostsController@show'); // most of the time routes with variable is prefered below
+Route::get('/p/{post}', 'PostsController@show'); // most of the time, routes with variable is prefered below
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');

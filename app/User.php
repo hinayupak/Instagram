@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewUserWelcomeMail;
 
 class User extends Authenticatable
 {
@@ -44,9 +46,18 @@ class User extends Authenticatable
         // gets fired whenever a new user is created
         // see https://laravel.com/docs/6.x/eloquent#events
         static::created(function ($user) {
+
+            // creates profile upon register
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+
+            // send out email using https://mailtrap.io/
+            // remember to add dependencies above like
+            // use Illuminate\Support\Facades\Mail;
+            // use App\Mail\NewUserWelcomeMail;
+            Mail::to($user->email)->send(new NewUserWelcomeMail());
+
         });
     }
 
